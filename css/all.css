@@ -834,7 +834,7 @@ img {
 }
 
 .section-slogan {
-  background: #fff url(../../../assets/banner.jpg) no-repeat right center/100%;
+  background: #fff url(../assets/banner.jpg) no-repeat right center/100%;
 }
 
 @media (min-width: 768px) {
