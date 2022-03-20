@@ -1,0 +1,370 @@
+//banner section
+.section-banner{
+    
+    @include ipad{
+        padding: 100px 0;
+    }
+
+    @include web{
+        padding: 140px 0;
+    }
+}
+.banner-block{
+    
+    blockquote{
+        font-size: 1.4rem;
+        transition: .2s;
+        margin-bottom: 0;
+        padding: 20px 0;
+        position: relative;
+
+        //改寫圖片方式
+        &:after{
+            content: '';
+            position: absolute;
+            left: 55%;
+            bottom: -5%;
+            width: 45%;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: #fff url(../assets/profile-img.png) no-repeat top center / 100%;
+            z-index: -1;
+
+            @include ipad{
+                bottom: -25%;
+            }
+
+            @include web{
+                top: -20%;
+                width: 40%;
+            }
+        }
+
+        span{
+            display: block;
+            line-height: 1.5;
+            padding: 4px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            background-color: #eee;
+            color: #FF6464;
+            width: fit-content;
+            &:last-child{
+                margin-left: 1rem;
+
+                @include ipad{
+                    margin-left: 1.5rem;
+                }
+
+                @include web{
+                    margin-left: 3rem;
+                }
+            }
+        }
+
+        @include ipad{
+            font-size: 2.6rem;
+            padding-left: 1.875rem;
+        }
+
+        @include web{
+            font-size: 3.6rem;
+            padding-left: 2.5rem;
+        }
+    }
+}
+
+//section-biography
+.bio-txt{
+    p{
+        letter-spacing: .1em;
+    }
+}
+
+//experience section
+
+
+.timeline-content{
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    .container-info{
+        width: 100%;
+
+        .timeline-section{
+            padding-left: 20px;
+            margin-bottom: 24px;
+
+            @include ipad{
+                &:nth-child(even){
+                    .timeline-box{
+                        margin-left: auto;
+                    }
+                }
+
+                &:nth-child(odd){
+                    .timeline-arrow{
+                        left: initial;
+                        right: -15px;
+                        transform: rotate(180deg);
+                    }
+                }
+            }
+        }
+
+        .timeline-box{
+            padding: 12px;
+            background-color: #eee;
+            box-sizing: border-box;
+            border-radius: 20px;
+            position: relative;
+
+            h3{
+                margin-bottom: 12px;
+                font-size: 1.2rem;
+                font-weight: 800;
+                &+p{
+                    color: #666;
+                    font-weight: 600;
+
+                    span{
+                        padding-left: 8px;
+                        font-style: italic;
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+
+            ul{
+                list-style: none;
+                padding: 0;
+                margin: 0;
+
+                li{
+                    padding-left: 1em;
+                    letter-spacing: .1em;
+                    &:before{
+                        content: '-';
+                        padding: 0 4px;
+                        font-weight: 600;
+                    }
+                }
+            }
+
+            .timeline-arrow{
+                position: absolute;
+                top: 50px;
+                left: -15px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 15px 15px 15px 0;
+                border-color: transparent #eee transparent transparent;
+            }
+
+            @include ipad{
+                width: 46%;
+                padding: 16px;
+            }
+
+            @include web{
+                padding: 20px;
+            }
+        }
+
+    }
+
+    .container-time-line{
+        order: -1;
+        padding: 0 5px;
+
+        .time-line-bar{
+            width: 10px;
+            height: 100%;
+            border-radius: 15px;
+            background-color: #aaa;
+        }
+
+        @include ipad{
+            position: absolute;
+            left: 50%;
+            top: 0;
+            height: 100%;
+        }
+    }
+
+    .container-bullet{
+        order: -1;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+
+        .timeline-section{
+            width: 20px;
+            flex: 1;
+
+            .time-bullet{
+                width: 100%;
+                height: 20px;
+                background-color: #666;
+                border-radius: 50%;
+                margin-top: 55px;
+                box-shadow:
+                    0px 0px 10px rgba(0, 0, 0, 0.04),
+                    0px 0px 80px rgba(0, 0, 0, 0.08)
+                    ;
+            }
+
+            &:nth-child(2){
+                .time-bullet{
+                    margin-top: 60px;
+                }
+            }
+
+            &:nth-child(3){
+                .time-bullet{
+                    margin-top: 20px;
+                }
+            }
+
+            &:last-child{
+                .time-bullet{
+                    margin-top: 50px;
+
+                    @include ipad{
+                        margin-top: 25px;
+                    }
+                }
+            }
+        }
+
+        @include ipad{
+            left: 50%;
+        }
+    }
+
+}
+
+//section-skill
+
+.skill-txt{
+    ul{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        &>li{
+            padding: 0 15px;
+
+            &+li{
+                margin-top: 20px;
+
+                @include ipad{
+                    margin-top: initial;
+                }
+            }
+
+            &>ul{
+                list-style: inside disc ;
+                display: inline-block;
+
+                li{
+                    margin-top: 0;
+                    line-height: 1.5;
+                    width: 100%;
+
+                    &:nth-child(-n+2){
+                        margin-bottom: 0;
+                    }
+                }
+            }
+
+            @include ipad{
+                width: 50%;
+
+                &:nth-child(-n+2){
+                    margin-bottom: 30px;
+                }
+            }
+
+            @include web{
+                width: 25%;
+
+                &:nth-child(-n+2){
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        span{
+            font-size: 4rem;
+            display: block;
+            width: fit-content;
+            padding: 20px 24px;
+            border-radius: 50%;
+            background-color: #eee;
+            margin: 0 auto 1rem;
+
+            .fa-solid{
+                aspect-ratio: 1/1;
+                width: 80px;
+                text-align: center;
+                color: #ccc;
+
+                @include ipad{
+                    width: 60px;
+                }
+
+                @include web{
+                    width: 44px;
+                }
+            }
+
+            @include ipad{
+                font-size: 3rem;
+            }
+
+            @include web{
+                font-size: 2.2rem;
+            }
+        }
+
+        h3{
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 auto 12px ;
+            padding-bottom: 12px;
+            text-align: center;
+            position: relative;
+            width: fit-content;
+            &:before{
+                content: '';
+                width: 100%;
+                height: 2px;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                border-radius: 5px;
+                background-color: #91C483;
+            }
+        }
+
+        p{
+            font-size: 1rem;
+            letter-spacing: .1em;
+            
+        }
+
+        @include ipad{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    
+}
+

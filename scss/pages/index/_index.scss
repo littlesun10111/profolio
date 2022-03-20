@@ -1,0 +1,292 @@
+[class*="section-"]{
+    padding: 60px 0;
+}
+
+//solgan section
+.section-slogan{
+    background: #fff url(../../../assets/banner.jpg) no-repeat right center / 100%;
+
+    @include ipad{
+        padding: 100px 0;
+    }
+
+    @include web{
+        padding: 140px 0;
+    }
+}
+.slogan-block{
+    
+    blockquote{
+        font-size: 1.4rem;
+        transition: .2s;
+        margin-bottom: 0;
+
+        span{
+            display: block;
+            line-height: 1.5;
+            padding: 4px;
+            margin-bottom: 8px;
+            font-weight: 600;
+            background-color: #eee;
+            color: #FF6464;
+            width: fit-content;
+            &:last-child{
+                margin-left: 1rem;
+
+                @include ipad{
+                    margin-left: 1.5rem;
+                }
+
+                @include web{
+                    margin-left: 3rem;
+                }
+            }
+        }
+
+        @include ipad{
+            font-size: 2.6rem;
+            padding-left: 1.875rem;
+        }
+
+        @include web{
+            font-size: 3.6rem;
+            padding-left: 2.5rem;
+        }
+    }
+}
+
+//section-profile
+
+.section-profile{
+    background: linear-gradient(150deg, #eee 15%, #fff 15.2%, #fff 50%, #eee 50.2%);
+
+    @include ipad{
+        background: linear-gradient(160deg, #eee 15%, #fff 15.2%, #fff 50%, #eee 50.2%);
+
+    }
+}
+
+.profile-block{
+
+    .profile-content{
+        @include ipad{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            position: relative;
+        }
+    }
+
+    .profile-txt{
+        margin-bottom: 40px;
+
+        h3{
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        p{
+            color: #000;
+            line-height: 1.8;
+        }
+
+        @include ipad{
+            width: 50%;
+            padding-right: 20px;
+            box-sizing: border-box;
+        }
+    }
+    .profile-img{
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+        border-radius: 1.2rem;
+        overflow: hidden;
+        transform: skewX(-2deg);
+        box-shadow:
+            0px 1.3px 3.6px -2px rgba(0 ,0  ,0 , 0.04), 0px 20px 15px -2px rgba(0 ,0  ,0 , 0.04), 0px 30px 30px -4px rgba(0 ,0  ,0 , 0.05), 0px 36px 60px -8px rgba(0 ,0  ,0 , 0.08)
+            ;
+
+
+        @include ipad{
+            width: 45%;
+            margin-bottom: 0;
+        }
+    }
+
+    .profile-link{
+        text-align: center;
+
+        @include ipad{
+            position: absolute;
+            bottom: 15%;
+            left: 0;
+        }
+    }
+}
+
+//section-works
+
+.section-works{
+    overflow: hidden;
+    position: relative;
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 150px;
+        background: linear-gradient(170deg, #eee 50%, transparent 50.2%);
+
+        @include ipad{
+            height: 450px;
+        }
+    }
+
+    .container{
+        position: relative;
+        z-index: 1;
+    }
+}
+
+.hidden{
+    display: none;
+}
+.works-category{
+
+    margin-bottom: 20px;
+
+    .tabs{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+
+        li{
+            font-size: 1.1rem;
+            color: #666;
+            cursor: pointer;
+            text-align: center;
+            text-transform: uppercase;
+            font-style: italic;
+            margin: 0 20px;
+            padding: 4px;
+
+            &:not(.active){
+                position: relative;
+                color: #000;
+                transition: color .3s;
+
+                &:before{
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    transform: scaleX(0) skewX(0deg);
+                    transform-origin:bottom right;
+                    background-color: #FF6464;
+                    transition:transform .3s ease;
+                    z-index: -1;
+                }
+
+                &:hover{
+                    color: #eee;
+
+                    &:before{
+                        transform:scaleX(1) skewX(-7deg);
+                        transform-origin:bottom left;
+                    }
+                }
+            }
+
+            &.active{
+                color: #eee;
+                background-color: #FF6464;
+                font-style: normal;
+                transform: skewX(-7deg);
+            }
+
+            @include mobile{
+                margin: 0 8px;
+            }
+
+            @include ipad{
+                font-size: 1.4rem;
+            }
+        }
+
+    }
+}
+
+.work-group{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li{
+        //demo
+        background-color: #aaa;
+
+        &+li{
+            margin-top: 20px;
+
+            @include ipad{
+                margin-top: 0;
+            }
+
+        }
+
+        @include ipad {
+            width: calc(50% - 15px);
+            margin-bottom: 20px;
+        }
+
+    }
+
+    .work-item{
+        text-decoration: none;
+        display: block;
+        box-sizing: border-box;
+        padding: 20px;
+
+        .category-tag{
+            font-style: italic;
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            background-color: #FFE162;
+            color: inherit;
+
+            &:before{
+                content: '#';
+            }
+        }
+
+        .work-txt{
+            h3{
+                color: #fff;
+                font-size: 1.2rem;
+                text-transform: capitalize;
+            }
+
+            p{
+                color: #fff;
+                letter-spacing: .1em;
+                line-height:1.2;
+            }
+
+        }
+    }
+
+    @include ipad{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+}
