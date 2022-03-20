@@ -1,10 +1,19 @@
 [class*="section-"]{
-    padding: 60px 0;
+    padding: 20px 0;
+
+    @include ipad{
+        padding: 40px 0;
+    }
+
+    @include web{
+        padding: 60px 0;
+    }
 }
 
 //solgan section
 .section-slogan{
     background: #fff url(../assets/banner.jpg) no-repeat right center / 100%;
+    padding: 60px 0;
 
     @include ipad{
         padding: 100px 0;

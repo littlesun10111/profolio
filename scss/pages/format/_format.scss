@@ -39,7 +39,8 @@ img{
         0px 36.1px 24.1px rgba(0, 0, 0, 0.107),
         0px 47px 80px rgba(0, 0, 0, 0.16)
         ;
-
+    position: relative;
+    z-index: 10;
 
     h1{
         margin-bottom: 0;
