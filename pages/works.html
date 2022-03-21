@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YuChing-Peng</title>
+    <meta name="author" content="littlesun,day101010111@gmail.com">
+    <meta name="description" content="resume,portfolio">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.png" sizes="48x48">
+    <link rel="stylesheet" href="../css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-check">
+    <label for="menu-check" class="hb-full"></label>
+    <header class="header">
+        <h1>
+            <a href="/"><div class="web-logo">
+                <img src="../assets/logo.png" alt="logo">
+            </div></a>
+        </h1>
+        <label for="menu-check" class="hb">
+            <span class="sr-only"></span>
+        </label>
+        
+        <nav class="main-nav">
+            <a href="about.html" data-info="about">about</a>
+            <a href="works.html" data-info="works">works</a>
+            <a href="mailto:day101010111@gmail.com" data-info="contact">contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section-product">
+            <div class="container">
+                <div class="breadcrumb-block">
+                    <ol>
+                        <li><a href="../index.html">home</a></li>
+                        <li><a href="works.html" aria-disabled="true">works</a></li>
+                    </ol>
+                </div>
+                <div class="product-block">
+                    <div class="works-category">
+                        <ul class="tabs">
+                            <li class="tab" data-info="all">all</li>
+                            <li class="tab" data-info="web">web</li>
+                            <li class="tab" data-info="graphic">graphic</li>
+                        </ul>
+                    </div>
+                    <div class="works-list">
+                        <ul class="work-group">
+                            <li data-info="graphic"><a href="./works/banner-casino.html" class="work-item">
+                                <div class="work-content">
+                                    <div class="work-img">
+                                        <img src="../assets/cropped-22.jpg" alt="">
+                                    </div>
+                                    <span class="category-tag">graphic</span>
+                                    <div class="work-txt">
+                                        <div class="work-item-title">
+                                            <h3>網站橫幅製作</h3>
+                                        </div>
+                                        <div class="work-item-descr">
+                                            <p>檔期banner</p>
+                                            <span>2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li data-info="graphic"><a href="./works/banner-top.html" class="work-item">
+                                <div class="work-content">
+                                    <div class="work-img">
+                                        <img src="../assets/istockphoto-637332860-612x612.jpg" alt="">
+                                    </div>
+                                    <span class="category-tag">graphic</span>
+                                    <div class="work-txt">
+                                        <div class="work-item-title">
+                                            <h3>網站橫幅製作</h3>
+                                        </div>
+                                        <div class="work-item-descr">
+                                            <p>檔期banner</p>
+                                            <span>2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li data-info="graphic"><a href="./works/banner-galaxy.html" class="work-item">
+                                <div class="work-content">
+                                    <div class="work-img">
+                                        <img src="../assets/istockphoto-904319798-612x612.jpg" alt="">
+                                    </div>
+                                    <span class="category-tag">graphic</span>
+                                    <div class="work-txt">
+                                        <div class="work-item-title">
+                                            <h3>網站橫幅製作</h3>
+                                        </div>
+                                        <div class="work-item-descr">
+                                            <p>檔期banner</p>
+                                            <span>2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li data-info="web"><a href="./works/web-layout.html" class="work-item">
+                                <div class="work-content">
+                                    <div class="work-img">
+                                        <img src="../assets/799020_s.jpg" alt="">
+                                    </div>
+                                    <span class="category-tag">web</span>
+                                    <div class="work-txt">
+                                        <div class="work-item-title">
+                                            <h3>網站版型設計</h3>
+                                        </div>
+                                        <div class="work-item-descr">
+                                            <p>娛樂城版型設計</p>
+                                            <span>2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                            <li data-info="web"><a href="./works/web-perfume.html" class="work-item">
+                                <div class="work-content">
+                                    <div class="work-img">
+                                        <img src="../assets/achievement_img3.jpg" alt="">
+                                    </div>
+                                    <span class="category-tag">web</span>
+                                    <div class="work-txt">
+                                        <div class="work-item-title">
+                                            <h3>Perfume Shop</h3>
+                                        </div>
+                                        <div class="work-item-descr">
+                                            <p>格線切版練習</p>
+                                            <span>2020</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a></li>
+                        </ul>
+                    </div>
+                </div>   
+            </div>
+        </section>
+    </main>
+    <script src="../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.tab[data-info="all"]').addClass('active');
+
+            $('.tab[data-info="web"]').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $('.work-item').parent('[data-info="graphic"]').slideUp('fast');
+                $('.work-item').parent('[data-info="web"]').delay( 200 ).slideDown('slow');
+                
+            });
+            $('.tab[data-info="graphic"]').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $('.work-item').parent('[data-info="web"]').slideUp('fast');
+                $('.work-item').parent('[data-info="graphic"]').delay( 200 ).slideDown('slow');
+                
+            });
+            $('.tab[data-info="all"]').click(function(){
+                $(this).addClass('active');
+                $(this).siblings().removeClass('active');
+                $('.work-item').parent().slideDown('slow');
+            });
+        })
+    </script>
+</body>
+</html>
