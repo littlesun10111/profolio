@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banner Casino</title>
+    <meta name="author" content="littlesun,day101010111@gmail.com">
+    <meta name="description" content="resume,portfolio">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-check">
+    <label for="menu-check" class="hb-full"></label>
+    <header class="header">
+        <h1>
+            <a href="../../index.html"><div class="web-logo">
+                <img src="../../assets/logo.png" alt="logo">
+            </div></a>
+        </h1>
+        <label for="menu-check" class="hb">
+            <span class="sr-only"></span>
+        </label>
+        
+        <nav class="main-nav">
+            <a href="../about.html" data-info="about">about</a>
+            <a href="../works.html" data-info="works">works</a>
+            <a href="mailto:day101010111@gmail.com" data-info="contact">contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section-article">
+            <div class="container">
+                <div class="breadcrumb-block">
+                    <ol>
+                        <li><a href="../../index.html">home</a></li>
+                        <li><a href="../works.html" >works</a></li>
+                        <li><a href="/" aria-disabled="true">網站橫幅製作</a></li>
+                    </ol>
+                </div>
+                <article class="article-block">
+                    <div class="article-banner">
+                        <img src="../../assets/cropped-22.jpg" alt="">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-title">
+                            <span class="category-tag">graphic</span>
+                            <h1>網站橫幅製作</h1>
+                            <p class="sub-title">檔期banner</p>
+                            <span class="date">2021</span>
+                        </div>
+                        <div class="article-txt">
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quis inventore omnis quaerat, eaque culpa earum quo odit tenetur blanditiis? Quasi eaque facere doloremque expedita reiciendis provident impedit doloribus veniam!</p>
+                            <div class="works-info">
+                                <dl>
+                                    <dt>role</dt>
+                                    <dd>design</dd>
+                                </dl>
+                            </div>
+                            <div class="works-slideshow">
+                                <img src="../../assets/banner-01.jpg" alt="">
+                                <img src="../../assets/banner-02.jpg" alt="">
+                                <img src="../../assets/banner-03.jpg" alt="">
+                                <img src="../../assets/banner-04.jpg" alt="">
+                                <img src="../../assets/banner-05.jpg" alt="">
+                                <img src="../../assets/banner-06.jpg" alt="">
+                                <img src="../../assets/banner-07.jpg" alt="">
+                                <img src="../../assets/banner-08.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.works-slideshow').each(function(){
+
+                let slideImgs = $(this).find('img'),
+                    slideImgsCount = slideImgs.length,
+                    currentIndex = 0;
+                
+                slideImgs.eq(currentIndex).fadeIn();
+                
+                setInterval(showNextSlide, 5000);
+                
+                function showNextSlide(){
+                    let nextIndex = (currentIndex + 1) % slideImgsCount;
+                    console.log(nextIndex)
+                    slideImgs.eq(currentIndex).fadeOut();
+                    slideImgs.eq(nextIndex).fadeIn();
+                    currentIndex = nextIndex;
+                }
+            });
+        });
+        
+    </script>
+</body>
+</html>
