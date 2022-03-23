@@ -14,10 +14,35 @@ img{
     font-size: 1.1rem;
     background-color: #2F2C2A;
     color: #eee;
+    transform: skewX(-8deg);
     text-transform: capitalize;
     text-decoration: none;
+    position: relative;
+    transition: .2s ease-out;
+
+    span{
+        padding-left: 0.5rem;
+    }
+
+    &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background-color: #FF6464;
+        width: 0;
+        height: 100%;
+        transition: .2s ease-out;
+    }
+
     &:hover{
+        transform: skewX(-8deg)translateX(5px);
         color: #fff;
+
+        &:before{
+            width: 100%;
+        }
     }
 }
 //h1
@@ -206,7 +231,8 @@ img{
 .works-block,
 .footer-block,
 .breadcrumb-block,
-.article-block{
+.article-block,
+.contact-block{
     padding: 0 15px;
 }
 
@@ -304,23 +330,21 @@ img{
 //section footer
 
 .footer{
-    background-color: #FFE162;
+    background-color: #e0eaee;
     padding: 20px 0;
+
+    .footer-block{
+        @include web{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+    }
 
     ul{
         list-style: none;
         padding: 0;
-        border-top: 1px solid #eee;
-        width: 100%;
-        max-width: 600px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-
-        a{
-            padding: 1rem 0.5rem;
-            font-size: 1.5rem;
-        }
+        margin: 0;
     }
 
     a{
@@ -336,8 +360,125 @@ img{
             margin: auto;
         }
 
-        &:hover{
+        &:hover,
+        &:focus{
             color: #FF6464;
+        }
+    }
+
+    .siteMap-nav{
+        padding-bottom: 40px;
+        &>ul{
+            width: 90%;
+            margin: 0 auto;
+            text-align: center;
+
+            &>li{
+                font-size: 1rem;
+                position: relative;
+
+                &:before,
+                &:after{
+                    content: '';
+                    width: calc((100% - 100px) / 2);
+                    height: 2px;
+                    background-color: #91C483;
+                    border-radius: 7px;
+                    position: absolute;
+                    right: 0;
+                    top: 12px;
+
+                    @include ipad{
+                        width: calc(100% - 130px);
+                        right: 0.5rem;
+                    }
+                }
+
+                &:after{
+                    left: 0;
+
+                    @include ipad{
+                        width: 20px;
+                        left: 0.5rem;
+                    }
+                }
+
+                &+li{
+                    margin-top: 1.5rem;
+
+                    @include ipad{
+                        margin-top: 0;
+                    }
+                }
+
+                @include ipad{
+                    width: 50%;
+                    padding: 0 0.5rem 0 2.5rem;
+                    box-sizing: border-box;
+                }
+
+                @include web{
+                    width: 45%;
+                }
+            }
+
+            @include ipad{
+                width: 100%;
+                display: flex;
+                text-align: initial;
+            }
+
+            @include web{
+                justify-content: space-between;
+            }
+        }
+
+        @include web{
+            flex: 1 1 auto;
+        }
+    }
+
+    .sub-nav{
+        padding-top: 1rem;
+
+        a{
+            text-transform: uppercase;
+            font-weight: 600;
+            padding: 0.5rem 1.2rem;
+            width: fit-content;
+
+            &>[class*="fa-"]{
+                padding-right: 0.5rem;
+            }
+
+            @include web{
+                padding-left: 0;
+                padding-right: 0;
+            }
+        }
+    }
+
+    
+
+    .footer-logo{
+        width: 84px;
+        margin: 0 auto 24px;
+
+        @include web{
+            order: -1;
+            flex: 0 0 84px;
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+    p{
+        text-align: center;
+        font-size: 0.9rem;
+        margin: 0;
+
+        @include web{
+            width: 100%;
         }
     }
 
