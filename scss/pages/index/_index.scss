@@ -352,15 +352,14 @@
         transition: .3s;
     }
 
-    &+a{
-        display: block;
-        width: fit-content;
-        margin: auto;
-    }
-
     @include ipad{
         display: flex;
         flex-wrap: wrap;
     }
+}
+
+.work-link{
+    padding: 20px 0;
+    text-align: center;
 
 }
