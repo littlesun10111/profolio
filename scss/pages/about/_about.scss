@@ -108,6 +108,14 @@
             letter-spacing: .1em;
             line-height: 2;
             margin-bottom: 1.2rem;
+
+            @include ipad{
+                font-size: 1.2rem;
+            }
+
+            @include web{
+                font-size: 1.4rem;
+            }
         }
 
         @include ipad{

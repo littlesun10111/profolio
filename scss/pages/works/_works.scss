@@ -89,13 +89,40 @@
 }
 
 .works-gallery{
+
     @include ipad{
         display: flex;
         flex-wrap: wrap;
+    }
 
-        .gallery-img{
+    .gallery-img{
+        margin-bottom: 20px;
+
+        @include ipad{
             width: 50%;
             padding: 8px;
+            margin-bottom: 0;
         }
+    }
+}
+
+.works-swiper {
+    width: 100%;
+    height: 400px;
+    position: relative;
+    overflow: hidden;
+
+    .swiper-slide{
+        width: 100%;
+        height: 100%;
+    }
+
+    .swiper-button-next, 
+    .swiper-button-prev{
+        color: #FF6464;
+    }
+
+    .swiper-pagination-fraction{
+        color: #FFE162;
     }
 }

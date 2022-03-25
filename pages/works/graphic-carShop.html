@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>藍極光產品介紹圖</title>
+    <meta name="author" content="littlesun,day101010111@gmail.com">
+    <meta name="description" content="resume,portfolio">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-check">
+    <label for="menu-check" class="hb-full"></label>
+    <header class="header">
+        <h1>
+            <a href="../../index.html"><div class="web-logo">
+                <img src="../../assets/logo.png" alt="logo">
+            </div></a>
+        </h1>
+        <label for="menu-check" class="hb">
+            <span class="sr-only"></span>
+        </label>
+        
+        <nav class="main-nav">
+            <a href="../about.html" data-info="about">about</a>
+            <a href="../works.html" data-info="works">works</a>
+            <a href="mailto:day101010111@gmail.com" data-info="contact">contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section-article">
+            <div class="container">
+                <div class="breadcrumb-block">
+                    <ol>
+                        <li><a href="../../index.html">home</a></li>
+                        <li><a href="../works.html" >works</a></li>
+                        <li><a href="/" aria-disabled="true">藍極光產品介紹圖</a></li>
+                    </ol>
+                </div>
+                <article class="article-block">
+                    <div class="article-banner">
+                        <img src="../../assets/car-banner.jpg" alt="">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-title">
+                            <span class="category-tag">graphic</span>
+                            <h1>藍極光產品介紹圖</h1>
+                            <p class="sub-title">商品販賣介紹圖</p>
+                            <span class="date">2019-2020</span>
+                        </div>
+                        <div class="article-txt">
+                            <p>整理需上架產品，拍攝產品照片，並後製美化。排出販賣的商品介紹圖文，最後上架到品牌販賣帳號。</p>
+                            <div class="works-info">
+                                <dl>
+                                    <dt>url</dt>
+                                    <dd>詳細圖文請查詢蝦皮：藍極光</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>role</dt>
+                                    <dd>design</dd>
+                                </dl>
+                            </div>
+                            <div class="works-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/carShop-1.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/carShop-2.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="swiper-pagination"></div>
+
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <div class="siteMap-nav">
+                    <ul>
+                        <li>SITE MAP
+                            <ul class="sub-nav">
+                                <li><a href="../../index.html">home</a></li>
+                                <li><a href="../about.html">about</a></li>
+                                <li><a href="../works.html">work</a></li>
+                            </ul>
+                        </li>
+                        <li>SOCIAL
+                            <ul class="sub-nav">
+                                <li><a href="https://github.com/littlesun10111"><i class="fa-brands fa-github"></i>github</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCWeL6PykA_gz3EmCxcEmQoQ"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+                                <li><a href="https://www.instagram.com/littlesun10111/"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+                                <li><a href="mailto:day101010111@gmail.com"><i class="fa-solid fa-envelope"></i>e-mail</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-logo">
+                    <img src="../../assets/logo.png" alt="">
+                </div>
+                <p>Copyright © Yu-Ching Peng</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.works-swiper', {
+            spaceBetween: 30,
+            loop: false,
+            grabCursor:true,
+            autoplay: {
+                delay: 2000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+    </script>
+</body>
+</html>
