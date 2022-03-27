@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -37,7 +37,7 @@
                     <ol>
                         <li><a href="../../index.html">home</a></li>
                         <li><a href="../works.html" >works</a></li>
-                        <li><a href="/" aria-disabled="true">sweet dessert shop</a></li>
+                        <li><a href="/" aria-disabled="true">Sweet Dessert Shop</a></li>
                     </ol>
                 </div>
                 <article class="article-block">
@@ -52,9 +52,8 @@
                             <span class="date">2020</span>
                         </div>
                         <div class="article-txt">
-                            <p>甜點店商切版 用甜點店商的設計稿手刻切版，class命名的邏輯每個階段一直在修正。</p>
-                            <p>雖然頁數很多，可是版型大同小異。用此設計稿訓練不要讓自己的切版雜亂無章，並且盡量和設計稿一模一樣。</p>
-                            <p>嘗試客製化AOS的參數設定，讓使用者體驗更順暢。</p> 
+                            <p>以甜點店商的設計稿進行手刻切版，製作頁面除了首頁和商品介紹也包含了購物的整個流程：加入購物車、結帳、付款、運送資料...等等。規劃頁面的同時也從中了解不同裝置所要呈現的資訊哪些是可以在手機板省略，哪些資訊的排版在不同裝置中要如何擺放。</p>
+                            <p>在樣式部分，也嘗試用欲處理器去撰寫，可以輕鬆管理一個專案的各種變數，不用寫很多重複的選擇器，在撰寫的過程可以更方便的去區分DOM的結構和css樣式寫在哪裡，更增加維護和查找的速度。</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
@@ -62,23 +61,41 @@
                                 </dl>
                                 <dl>
                                     <dt>role</dt>
-                                    <dd>design</dd>
+                                    <dd>Front-end</dd>
                                 </dl>
-                            </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div>
                             </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-sweet.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-sweet.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="web-perfume.html">next work
+                                <span>PERFUME SHOP</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -111,5 +128,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

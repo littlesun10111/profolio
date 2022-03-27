@@ -60,6 +60,16 @@
         dd{
             text-transform: capitalize;
             font-weight: 600;
+            a {
+              color: #2F2C2A;
+              text-decoration-thickness: 2px;
+              text-underline-offset: 2px;
+
+              &:hover,
+              &:focus {
+                color: #FF6464;
+              }
+            }
         }
 
         .works-info{
@@ -69,6 +79,24 @@
             margin-bottom: 20px;
         }
     }
+}
+
+section.section-gallery {
+  padding-top: 0;
+
+  .main-banner,
+  .sub-img {
+    margin-bottom: 20px;
+
+    @include ipad {
+      margin-bottom: 30px;
+    }
+
+    @include web {
+      margin-bottom: 40px;
+    }
+  }
+
 }
 
 .works-slideshow{

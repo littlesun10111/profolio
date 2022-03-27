@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>投資網站-AVENUE</title>
+    <meta name="author" content="littlesun,day101010111@gmail.com">
+    <meta name="description" content="resume,portfolio">
+    <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
+    <link rel="stylesheet" href="../../css/all.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <input type="checkbox" name="" id="menu-check">
+    <label for="menu-check" class="hb-full"></label>
+    <header class="header" id="top">
+        <h1>
+            <a href="../../index.html"><div class="web-logo">
+                <img src="../../assets/logo.png" alt="logo">
+            </div></a>
+        </h1>
+        <label for="menu-check" class="hb">
+            <span class="sr-only"></span>
+        </label>
+        
+        <nav class="main-nav">
+            <a href="../about.html" data-info="about">about</a>
+            <a href="../works.html" data-info="works">works</a>
+            <a href="mailto:day101010111@gmail.com" data-info="contact">contact</a>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="section-article">
+            <div class="container">
+                <div class="breadcrumb-block">
+                    <ol>
+                        <li><a href="../../index.html">home</a></li>
+                        <li><a href="../works.html" >works</a></li>
+                        <li><a href="/" aria-disabled="true">投資網站-AVENUE</a></li>
+                    </ol>
+                </div>
+                <article class="article-block">
+                    <div class="article-banner">
+                        <img src="../../assets/achievement_img8.jpg" alt="">
+                    </div>
+                    <div class="article-content">
+                        <div class="article-title">
+                            <span class="category-tag">web</span>
+                            <h1>投資網站-AVENUE</h1>
+                            <p class="sub-title">版型設計、手刻切版</p>
+                            <span class="date">2022</span>
+                        </div>
+                        <div class="article-txt">
+                            <p>在自己的設計經驗中，自認綠色系是一個很不容易配的好的配色。所以這個專案讓我挑戰了用綠色系規劃整個網站。</p>
+                            <p>因為想要呈現一點動感，所以在標題區塊上選擇用曲面去柔化線條。圖片旁邊也運用不銳利的圓角幾何去增加豐富度，讓整個畫面不要全部一片綠造成視覺疲勞</p> 
+                            <p>會員中心電腦版的配置改用Tabs的方式，去呈現另一種使用者後台的樣式。</p>
+                            <div class="works-info">
+                                <dl>
+                                    <dt>url</dt>
+                                    <dd><a href="https://www.aven9.com/" target="_abc">AVENUE</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>role</dt>
+                                    <dd>design,front-end</dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-avenue.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-avenue.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="banner-galaxy.html">next work
+                                <span>娛樂城橫幅設計</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-block">
+                <div class="siteMap-nav">
+                    <ul>
+                        <li>SITE MAP
+                            <ul class="sub-nav">
+                                <li><a href="../../index.html">home</a></li>
+                                <li><a href="../about.html">about</a></li>
+                                <li><a href="../works.html">work</a></li>
+                            </ul>
+                        </li>
+                        <li>SOCIAL
+                            <ul class="sub-nav">
+                                <li><a href="https://github.com/littlesun10111"><i class="fa-brands fa-github"></i>github</a></li>
+                                <li><a href="https://www.youtube.com/channel/UCWeL6PykA_gz3EmCxcEmQoQ"><i class="fa-brands fa-youtube"></i>youtube</a></li>
+                                <li><a href="https://www.instagram.com/littlesun10111/"><i class="fa-brands fa-instagram"></i>instagram</a></li>
+                                <li><a href="mailto:day101010111@gmail.com"><i class="fa-solid fa-envelope"></i>e-mail</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-logo">
+                    <img src="../../assets/logo.png" alt="">
+                </div>
+                <p>Copyright © Yu-Ching Peng</p>
+            </div>
+        </div>
+    </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

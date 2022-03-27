@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -68,6 +68,19 @@
                 </article>
             </div>
         </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="graphic-carShop.html">next work
+                                <span>藍極光產品介紹圖</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="footer">
@@ -98,10 +111,49 @@
             </div>
         </div>
     </footer>
+<<<<<<< Updated upstream
     <script src="../../js/jquery.min.js"></script>
     <script>
         $(function(){
             $('.works-slideshow').each(function(){
+=======
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+
+        const swiper = new Swiper('.works-swiper', {
+            spaceBetween: 30,
+            loop: false,
+            grabCursor:true,
+            autoplay: {
+                delay: 2000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+>>>>>>> Stashed changes
 
                 let slideImgs = $(this).find('img'),
                     slideImgsCount = slideImgs.length,

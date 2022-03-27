@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -42,7 +42,7 @@
                 </div>
                 <article class="article-block">
                     <div class="article-banner">
-                        <img src="../../assets/wing-stage-banner.jpg" alt="">
+                        <img src="../../assets/achievement_img12.jpg" alt="">
                     </div>
                     <div class="article-content">
                         <div class="article-title">
@@ -52,9 +52,9 @@
                             <span class="date">2021</span>
                         </div>
                         <div class="article-txt">
-                            <p>甜點店商切版 用甜點店商的設計稿手刻切版，class命名的邏輯每個階段一直在修正。</p>
-                            <p>雖然頁數很多，可是版型大同小異。用此設計稿訓練不要讓自己的切版雜亂無章，並且盡量和設計稿一模一樣。</p>
-                            <p>嘗試客製化AOS的參數設定，讓使用者體驗更順暢。</p> 
+                            <p>網紅網站的重新排版製作</p>
+                            <p>原本的網站首頁和其他頁面看起來風格不一樣，重新排版過後整個網站的風格和排版變得一致，並且運用客戶Logo重新設計網站配色，呈現出申請成為網紅是一件大膽又勇敢的事情。</p>
+                            <p>在製作此專案有很多的輸入框和搜尋條件的切版部分，在邏輯方面的思考又訓練得更快了一些，因此完成的非常有成就感。</p> 
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
@@ -65,20 +65,38 @@
                                     <dd>design,front-end</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-wing.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-wing.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="web-avenue.html">next work
+                                <span>投資網站-AVENUE</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -111,5 +129,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

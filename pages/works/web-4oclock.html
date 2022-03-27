@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -52,8 +52,9 @@
                             <span class="date">2017</span>
                         </div>
                         <div class="article-txt">
-                            <p>在大四的時候，用系上四年一度的新一代畢業展為題材，去練習設計一個活動網站的版型。
-                                現在回過頭來看看自己不管是版面設計，還是刻劃的code撰寫，實實在在顯示一個青澀的設計，但這就是一個過程，凡走過必留下痕跡。無論是一開始的網站發想、網sitemap、網站風格選擇、字體層級規劃、wireframe製作、甚至練習prototype展示過程，最後的code排版，無疑是一個不可取代的前端初體驗。</p>
+                                <p>這個專案是在大四的時候，用系上四年一度的新一代畢業展為題材，去練習設計一個活動網站的版型。</p>
+                                <p>那時候從網站的發想、網站sitemap、網站風格選擇、字體層級規劃、wireframe製作、甚至練習prototype展示過程，到最後自己切出規劃的版面，那個時候是用不成熟的手刻去切出全部的頁面，能夠達成的效果有限。現在回過頭來看，無疑是一個不可取代的前端初體驗。</p>
+                                <p>這個經驗也在日後，在接手每一個專案的時候，都會去理解專案想要呈現的資訊、促使使用者作出的行為，以及設計整個網站的風格走向、字體規劃、網站主視覺，不會讓網站內突然出現一個很突兀的區塊，也了解到每一個元件放置在什麼位置都有它存在的意義。</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
@@ -64,20 +65,38 @@
                                     <dd>design,front-end</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-clock.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-clockWire.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="../../assets/sub-details-clockLayout.jpg" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="web-toyKing.html">next work
+                                <span>皮酷玩具王</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -110,5 +129,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
