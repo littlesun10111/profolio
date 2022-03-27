@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>投資網站-Smida</title>
+    <title>投資網站-AVENUE</title>
     <meta name="author" content="littlesun,day101010111@gmail.com">
     <meta name="description" content="resume,portfolio">
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -37,48 +37,66 @@
                     <ol>
                         <li><a href="../../index.html">home</a></li>
                         <li><a href="../works.html" >works</a></li>
-                        <li><a href="/" aria-disabled="true">投資網站-Smida</a></li>
+                        <li><a href="/" aria-disabled="true">投資網站-AVENUE</a></li>
                     </ol>
                 </div>
                 <article class="article-block">
                     <div class="article-banner">
-                        <img src="../../assets/defult-banner.jpg" alt="">
+                        <img src="../../assets/achievement_img8.jpg" alt="">
                     </div>
                     <div class="article-content">
                         <div class="article-title">
                             <span class="category-tag">web</span>
-                            <h1>投資網站-Smida</h1>
+                            <h1>投資網站-AVENUE</h1>
                             <p class="sub-title">版型設計、手刻切版</p>
                             <span class="date">2022</span>
                         </div>
                         <div class="article-txt">
-                            <p>簡易的主色桃紅搭配白底，讓網站呈現清新又不失單調的風格。</p>
-                            <p>登入註冊入口以線、面的排列組合創造和諧感，達到簡易又不失美感的目的。</p> 
-                            <p>比較重要的資訊內容和其他頁面的連結互動方式以陰影的方式引導使用者，清楚的頁面引導不會讓使用者在網站迷失方向。</p>
+                            <p>在自己的設計經驗中，自認綠色系是一個很不容易配的好的配色。所以這個專案讓我挑戰了用綠色系規劃整個網站。</p>
+                            <p>因為想要呈現一點動感，所以在標題區塊上選擇用曲面去柔化線條。圖片旁邊也運用不銳利的圓角幾何去增加豐富度，讓整個畫面不要全部一片綠造成視覺疲勞</p> 
+                            <p>會員中心電腦版的配置改用Tabs的方式，去呈現另一種使用者後台的樣式。</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
-                                    <dd><a href="https://www.smidax.com/" target="_abc">Smida</a></dd>
+                                    <dd><a href="https://www.aven9.com/" target="_abc">AVENUE</a></dd>
                                 </dl>
                                 <dl>
                                     <dt>role</dt>
                                     <dd>design,front-end</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <!-- <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div> -->
-                            </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-avenue.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-avenue.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="banner-galaxy.html">next work
+                                <span>娛樂城橫幅設計</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -112,5 +130,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

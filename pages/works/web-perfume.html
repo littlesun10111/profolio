@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -52,8 +52,8 @@
                             <span class="date">2020</span>
                         </div>
                         <div class="article-txt">
-                            <p>用香水店商的設計稿練習 BS4 排版，在剛開始接觸網頁設計的時候就了解的鼎鼎大名的格線系統，但是有真的去用 BS4 排版練習，那還真的沒有。</p>
-                            <p>所以這個網頁練習足足讓我和 BS4 更加熟識。code的部分儘管不夠完美，但是相對於畢業網站已經有明顯的進步，這一點值得感到高興。</p>
+                            <p>用bootstrap切版呈現一個香水店商的網站，是剛入門格線系統很必備的知識。在嘗試過用bootstrap和純手刻切版後更能分辨框架和手刻的優缺點，DOM結構的安排和class name的取名也是讓整個網站是否容易維護的一個關鍵。</p>
+                            <p>對於框架和手刻的選擇，也是要取決於專案的時程和客人的需求，了解各個面向有助於在架構上的選擇更加彈性，這是我嘗試了框架和手刻後，所了解到的事情。</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
@@ -61,23 +61,41 @@
                                 </dl>
                                 <dl>
                                     <dt>role</dt>
-                                    <dd>design,front-end</dd>
+                                    <dd>Front-end</dd>
                                 </dl>
-                            </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div>
                             </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-perfume.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-perfume.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="web-4oclock.html">next work
+                                <span>4 O'CLOCK</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -111,5 +129,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

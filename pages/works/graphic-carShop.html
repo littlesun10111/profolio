@@ -15,7 +15,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -64,25 +64,38 @@
                                     <dd>design</dd>
                                 </dl>
                             </div>
-                            <div class="works-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/carShop-1.png" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/carShop-2.png" alt="">
-                                    </div>
+                        </div>
+                        <div class="works-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/carShop-1.png" alt="">
                                 </div>
-
-                                <div class="swiper-pagination"></div>
-
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-
+                                <div class="swiper-slide">
+                                    <img src="../../assets/carShop-2.png" alt="">
+                                </div>
                             </div>
+
+                            <div class="swiper-pagination"></div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="graphic-drink.html">next work
+                                <span>泰站泰式飲料</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -115,13 +128,29 @@
             </div>
         </div>
     </footer>
-
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+
         const swiper = new Swiper('.works-swiper', {
             spaceBetween: 30,
             loop: false,
             grabCursor:true,
+            autoHeight:true,
             autoplay: {
                 delay: 2000,
             },

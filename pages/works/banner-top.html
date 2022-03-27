@@ -15,7 +15,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -53,36 +53,45 @@
                             <span class="date">2021</span>
                         </div>
                         <div class="article-txt">
-                            <p>娛樂城橫幅父親節、東京奧運設計</p>
+                            <p>父親節活動、東京奧運活動橫幅製作</p>
                             <div class="works-info">
-                                <dl>
-                                    <dt>url</dt>
-                                    <dd>x</dd>
-                                </dl>
                                 <dl>
                                     <dt>role</dt>
                                     <dd>design</dd>
                                 </dl>
                             </div>
-                            <div class="works-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/TOP-banner.jpg" alt="">
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <img src="../../assets/TOP-banner-2.jpg" alt="">
-                                    </div>
+                        </div>
+                        <div class="works-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/TOP-banner.jpg" alt="">
                                 </div>
-
-                                <div class="swiper-pagination"></div>
-
-                                <div class="swiper-button-next"></div>
-                                <div class="swiper-button-prev"></div>
-
+                                <div class="swiper-slide">
+                                    <img src="../../assets/TOP-banner-2.jpg" alt="">
+                                </div>
                             </div>
+
+                            <div class="swiper-pagination"></div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="graphic-carShop.html">next work
+                                <span>藍極光產品介紹圖</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -104,7 +113,6 @@
                                 <li><a href="https://github.com/littlesun10111"><i class="fa-brands fa-github"></i>github</a></li>
                                 <li><a href="https://www.youtube.com/channel/UCWeL6PykA_gz3EmCxcEmQoQ"><i class="fa-brands fa-youtube"></i>youtube</a></li>
                                 <li><a href="https://www.instagram.com/littlesun10111/"><i class="fa-brands fa-instagram"></i>instagram</a></li>
-                                <li><a href="mailto:day101010111@gmail.com"><i class="fa-solid fa-envelope"></i>e-mail</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -112,16 +120,33 @@
                 <div class="footer-logo">
                     <img src="../../assets/logo.png" alt="">
                 </div>
-                <p>Copyright © Yu-Ching Peng</p>
+                <p>© 2022 Yu-Ching Peng.</p>
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
     <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+
         const swiper = new Swiper('.works-swiper', {
             spaceBetween: 30,
             loop: false,
             grabCursor:true,
+            autoHeight:true,
             autoplay: {
                 delay: 2000,
             },
@@ -138,6 +163,7 @@
             },
 
         });
+        
     </script>
 </body>
 </html>

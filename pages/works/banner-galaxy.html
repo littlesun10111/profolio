@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -71,6 +71,19 @@
                 </article>
             </div>
         </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="banner-top.html">next work
+                                <span>網站橫幅製作</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
     
     <footer class="footer">
@@ -102,9 +115,24 @@
             </div>
         </div>
     </footer>
-    <script src="../../js/jquery.min.js"></script>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../../js/jquery.min.js"></script>
     <script>
         $(function(){
+            $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+
             $('.works-slideshow').each(function(){
 
                 let slideImgs = $(this).find('img'),

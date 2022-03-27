@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -42,7 +42,7 @@
                 </div>
                 <article class="article-block">
                     <div class="article-banner">
-                        <img src="../../assets/wing-stage-banner.jpg" alt="">
+                        <img src="../../assets/achievement_img14.jpg" alt="">
                     </div>
                     <div class="article-content">
                         <div class="article-title">
@@ -52,9 +52,9 @@
                             <span class="date">2021</span>
                         </div>
                         <div class="article-txt">
-                            <p>甜點店商切版 用甜點店商的設計稿手刻切版，class命名的邏輯每個階段一直在修正。</p>
-                            <p>雖然頁數很多，可是版型大同小異。用此設計稿訓練不要讓自己的切版雜亂無章，並且盡量和設計稿一模一樣。</p>
-                            <p>嘗試客製化AOS的參數設定，讓使用者體驗更順暢。</p> 
+                            <p>和三五朋友組成的微型創業項目，其中一個朋友很喜歡玩具，因此有個想用玩具創業的想法，經過無數的討論和創業方向製訂，終於以外包的方式製作了一個陽春版的玩具販賣平台。</p>
+                            <p>在這個小型創業中，我負責的是平台的維護和畫面更新排版，這也是第一次使用Wordpress呈現畫面。若內部提出對畫面更改或美化的提議，那我會著手開始修改。</p>
+                            <p>為了習慣Wordpress的架構，也自己做了不少功課。因為這裡面有許多設定需要至少兩個或三個地方才能夠修改完成，這是我常常要克服的一個難題，和直接寫DOM或是框架完全不一樣。其實蠻多自架網站是從Wordpress開始做的，如果能完全熟悉這一套架站工具也是一個寶貴的經驗。</p> 
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
@@ -65,20 +65,38 @@
                                     <dd>design,front-end</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-gallery">
+            <!-- main img -->
+            <div class="main-banner">
+                <img src="../../assets/full-details-toy.jpg" alt="">
+            </div>
+            <div class="container">
+                <!-- sub img -->
+                <div class="sub-img">
+                    <img src="../../assets/sub-details-toy.jpg" alt="">
+                </div>
+                <!-- gif demo -->
+                <div class="whole-page-gif">
+                    <img src="" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="web-smida.html">next work
+                                <span>投資網站-SMIDA</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -112,5 +130,22 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>

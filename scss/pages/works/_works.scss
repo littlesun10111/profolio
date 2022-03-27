@@ -60,6 +60,16 @@
         dd{
             text-transform: capitalize;
             font-weight: 600;
+            a {
+              color: #2F2C2A;
+              text-decoration-thickness: 2px;
+              text-underline-offset: 2px;
+
+              &:hover,
+              &:focus {
+                color: #FF6464;
+              }
+            }
         }
 
         .works-info{
@@ -71,21 +81,41 @@
     }
 }
 
-.works-slideshow{
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    width: 100%;
-    min-height: 400px;
+section.section-gallery {
+  padding-top: 0;
 
-    img{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-       
+  .main-banner,
+  .sub-img {
+    margin-bottom: 20px;
+
+    @include ipad {
+      margin-bottom: 30px;
     }
+
+    @include web {
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
+.works-swiper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .swiper-slide {
+        width: 100%;
+        height: 100%;
+        }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #FF6464;
+    }
+
+    .swiper-pagination-fraction {
+      color: #FFE162;
+        }
 }
 
 .works-gallery{

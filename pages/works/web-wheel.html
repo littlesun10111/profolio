@@ -10,11 +10,17 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
     <link rel="stylesheet" href="../../css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <style>
+        .works-swiper{
+            height: 408px;
+        }
+    </style>
 </head>
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="../../index.html"><div class="web-logo">
                 <img src="../../assets/logo.png" alt="logo">
@@ -42,7 +48,7 @@
                 </div>
                 <article class="article-block">
                     <div class="article-banner">
-                        <img src="../../assets/defult-banner.jpg" alt="">
+                        <img src="../../assets/achievement_img13.jpg" alt="">
                     </div>
                     <div class="article-content">
                         <div class="article-title">
@@ -52,33 +58,52 @@
                             <span class="date">2022</span>
                         </div>
                         <div class="article-txt">
-                            <p>簡易的主色桃紅搭配白底，讓網站呈現清新又不失單調的風格。</p>
-                            <p>登入註冊入口以線、面的排列組合創造和諧感，達到簡易又不失美感的目的。</p> 
-                            <p>比較重要的資訊內容和其他頁面的連結互動方式以陰影的方式引導使用者，清楚的頁面引導不會讓使用者在網站迷失方向。</p>
+                            <p>2022新年抽獎活動</p>
+                            <p>專案在確認需求後先以photoshop排版提案，接著依照選定的樣式微調修改後，著手進行頁面切版，最後與程式對接，完成本次的活動頁面。</p> 
+                            <p>因為主題是新年，所以我選用了紅色和黃色作為主色，加上原本網站的黑色標頭和頁腳，能夠達到畫面的和諧。標題和說明文字以春聯樣式襯底，裝飾燈籠在切版的安排上希望能夠因為裝置的不同進行大小縮放和數量減少，所以選擇獨立出來定位在畫面上。</p>
+                            <p>抽獎方式是後端程式在跑，所以輪盤直接整張圖去做旋轉，只有輪盤中間是可以點擊互動的位置。</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>url</dt>
-                                    <dd><a href="#" target="_abc">---</a></dd>
+                                    <dd>x</dd>
                                 </dl>
                                 <dl>
                                     <dt>role</dt>
                                     <dd>design,front-end</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <!-- <div class="gallery-img">
-                                    <img src="../../assets/0607-02-01.jpg" alt="">
+                            <div class="works-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/Galaxy Gaming.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/Galaxy Gaming01.jpg" alt="">
+                                    </div>
                                 </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-03-01.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/0607-04-01.jpg" alt="">
-                                </div> -->
+
+                                <div class="swiper-pagination"></div>
+
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+
                             </div>
                         </div>
                     </div>
                 </article>
+            </div>
+        </section>
+        <section class="section-next">
+            <div class="container">
+                <div class="next-block">
+                    <div class="next-content">
+                        <div class="next-card">
+                            <a href="banner-casino.html">next work
+                                <span>娛樂城橫幅Demo設計</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -112,5 +137,45 @@
             </div>
         </div>
     </footer>
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="../../js/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+
+        const swiper = new Swiper('.works-swiper', {
+            spaceBetween: 30,
+            loop: false,
+            grabCursor:true,
+            autoHeight:true,
+            autoplay: {
+                delay: 2000,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                type: "fraction",
+                clickable: true,
+            },
+
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+
+        });
+    </script>
 </body>
 </html>

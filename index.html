@@ -14,7 +14,7 @@
 <body>
     <input type="checkbox" name="" id="menu-check">
     <label for="menu-check" class="hb-full"></label>
-    <header class="header">
+    <header class="header" id="top">
         <h1>
             <a href="index.html"><div class="web-logo">
                 <img src="assets/logo.png" alt="logo">
@@ -74,6 +74,23 @@
                     <div class="works-content">
                         <div class="works-list">
                             <ul class="work-group">
+                                <li data-info="web"><a href="pages/works/web-perfume.html" class="work-item">
+                                    <div class="work-content">
+                                        <div class="work-img">
+                                            <img src="assets/achievement_img3.jpg" alt="">
+                                        </div>
+                                        <span class="category-tag">web</span>
+                                        <div class="work-txt">
+                                            <div class="work-item-title">
+                                                <h3>Perfume Shop</h3>
+                                            </div>
+                                            <div class="work-item-descr">
+                                                <p>格線切版</p>
+                                                <span>2020</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></li>
                                 <li data-info="graphic"><a href="pages/works/banner-casino.html" class="work-item">
                                     <div class="work-content">
                                         <div class="work-img">
@@ -86,6 +103,23 @@
                                             </div>
                                             <div class="work-item-descr">
                                                 <p>檔期banner</p>
+                                                <span>2021</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li data-info="web"><a href="./works/web-wingStage.html" class="work-item">
+                                    <div class="work-content">
+                                        <div class="work-img">
+                                            <img src="../assets/achievement_img12.jpg" alt="">
+                                        </div>
+                                        <span class="category-tag">web</span>
+                                        <div class="work-txt">
+                                            <div class="work-item-title">
+                                                <h3>WING STAGE</h3>
+                                            </div>
+                                            <div class="work-item-descr">
+                                                <p>版型設計、手刻切版</p>
                                                 <span>2021</span>
                                             </div>
                                         </div>
@@ -108,57 +142,6 @@
                                         </div>
                                     </div>
                                 </a></li>
-                                <li data-info="graphic"><a href="pages/works/banner-galaxy.html" class="work-item">
-                                    <div class="work-content">
-                                        <div class="work-img">
-                                            <img src="assets/achievement_img5.jpg" alt="">
-                                        </div>
-                                        <span class="category-tag">graphic</span>
-                                        <div class="work-txt">
-                                            <div class="work-item-title">
-                                                <h3>網站橫幅製作</h3>
-                                            </div>
-                                            <div class="work-item-descr">
-                                                <p>檔期banner</p>
-                                                <span>2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a></li>
-                                <li data-info="web"><a href="pages/works/web-layout.html" class="work-item">
-                                    <div class="work-content">
-                                        <div class="work-img">
-                                            <img src="assets/achievement_img4.jpg" alt="">
-                                        </div>
-                                        <span class="category-tag">web</span>
-                                        <div class="work-txt">
-                                            <div class="work-item-title">
-                                                <h3>網站版型設計</h3>
-                                            </div>
-                                            <div class="work-item-descr">
-                                                <p>娛樂城版型設計</p>
-                                                <span>2021</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a></li>
-                                <li data-info="web"><a href="pages/works/web-perfume.html" class="work-item">
-                                    <div class="work-content">
-                                        <div class="work-img">
-                                            <img src="assets/achievement_img3.jpg" alt="">
-                                        </div>
-                                        <span class="category-tag">web</span>
-                                        <div class="work-txt">
-                                            <div class="work-item-title">
-                                                <h3>Perfume Shop</h3>
-                                            </div>
-                                            <div class="work-item-descr">
-                                                <p>格線切版</p>
-                                                <span>2020</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a></li>
                                 <li data-info="web"><a href="pages/works/web-4oclock.html" class="work-item">
                                     <div class="work-content">
                                         <div class="work-img">
@@ -172,6 +155,23 @@
                                             <div class="work-item-descr">
                                                 <p>全站規劃</p>
                                                 <span>2017</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a></li>
+                                <li data-info="graphic"><a href="pages/works/banner-galaxy.html" class="work-item">
+                                    <div class="work-content">
+                                        <div class="work-img">
+                                            <img src="assets/achievement_img5.jpg" alt="">
+                                        </div>
+                                        <span class="category-tag">graphic</span>
+                                        <div class="work-txt">
+                                            <div class="work-item-title">
+                                                <h3>網站橫幅製作</h3>
+                                            </div>
+                                            <div class="work-item-descr">
+                                                <p>檔期banner</p>
+                                                <span>2021</span>
                                             </div>
                                         </div>
                                     </div>
@@ -215,7 +215,22 @@
             </div>
         </div>
     </footer>
-
-
+    <a href="#top" id="toTop">
+        <div>
+            <i class="fa-solid fa-angles-up"></i>
+        </div>
+    </a>
+    <script src="js/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                if($(this).scrollTop()){
+                    $('#toTop').fadeIn();
+                }else{
+                    $('#toTop').fadeOut();
+                }
+            });
+        });
+    </script>
 </body>
 </html>
