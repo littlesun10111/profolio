@@ -94,11 +94,27 @@
             line-height: 1.5;
             margin-bottom: 30px;
             font-weight: bold;
+
+            @include ipad{
+                font-size: 1.6rem;
+            }
+
+            @include web{
+                font-size: 1.8rem;
+            }
         }
 
         p{
             color: #000;
             line-height: 1.8;
+
+            @include ipad{
+                font-size: 1.2rem;
+            }
+
+            @include web{
+                font-size: 1.4rem;
+            }
         }
 
         @include ipad{
@@ -313,7 +329,7 @@
                 &+span{
                     color: #2F2C2A;
                     font-size: 0.9rem;
-                    padding-left: 3rem;
+                    padding-left: 2rem;
                     width: fit-content;
                     font-style: italic;
                     display: flex;
@@ -333,7 +349,7 @@
                 }
 
                 @include web{
-                    font-size: 1.3rem;
+                    font-size: 1.25rem;
                 }
             }
 
