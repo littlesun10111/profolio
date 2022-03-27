@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
     <link rel="stylesheet" href="../../css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <input type="checkbox" name="" id="menu-check">
@@ -52,17 +53,29 @@
                             <span class="date">2021</span>
                         </div>
                         <div class="article-txt">
-                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis quis inventore omnis quaerat, eaque culpa earum quo odit tenetur blanditiis? Quasi eaque facere doloremque expedita reiciendis provident impedit doloribus veniam!</p>
+                            <p>父親節活動、東京奧運活動橫幅製作</p>
                             <div class="works-info">
                                 <dl>
                                     <dt>role</dt>
                                     <dd>design</dd>
                                 </dl>
                             </div>
-                            <div class="works-slideshow">
-                                <img src="../../assets/TOP-banner.jpg" alt="">
-                                <img src="../../assets/TOP-banner-2.jpg" alt="">
+                        </div>
+                        <div class="works-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img src="../../assets/TOP-banner.jpg" alt="">
+                                </div>
+                                <div class="swiper-slide">
+                                    <img src="../../assets/TOP-banner-2.jpg" alt="">
+                                </div>
                             </div>
+
+                            <div class="swiper-pagination"></div>
+
+                            <div class="swiper-button-next"></div>
+                            <div class="swiper-button-prev"></div>
+
                         </div>
                     </div>
                 </article>
@@ -111,12 +124,6 @@
             </div>
         </div>
     </footer>
-<<<<<<< Updated upstream
-    <script src="../../js/jquery.min.js"></script>
-    <script>
-        $(function(){
-            $('.works-slideshow').each(function(){
-=======
     <a href="#top" id="toTop">
         <div>
             <i class="fa-solid fa-angles-up"></i>
@@ -139,6 +146,7 @@
             spaceBetween: 30,
             loop: false,
             grabCursor:true,
+            autoHeight:true,
             autoplay: {
                 delay: 2000,
             },
@@ -153,24 +161,7 @@
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",
             },
->>>>>>> Stashed changes
 
-                let slideImgs = $(this).find('img'),
-                    slideImgsCount = slideImgs.length,
-                    currentIndex = 0;
-                
-                slideImgs.eq(currentIndex).fadeIn();
-                
-                setInterval(showNextSlide, 5000);
-                
-                function showNextSlide(){
-                    let nextIndex = (currentIndex + 1) % slideImgsCount;
-                    console.log(nextIndex)
-                    slideImgs.eq(currentIndex).fadeOut();
-                    slideImgs.eq(nextIndex).fadeIn();
-                    currentIndex = nextIndex;
-                }
-            });
         });
         
     </script>

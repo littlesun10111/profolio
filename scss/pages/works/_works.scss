@@ -99,21 +99,23 @@ section.section-gallery {
 
 }
 
-.works-slideshow{
-    position: relative;
-    margin: auto;
-    overflow: hidden;
-    width: 100%;
-    min-height: 400px;
+.works-swiper {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  .swiper-slide {
+        width: 100%;
+        height: 100%;
+        }
 
-    img{
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        display: none;
-       
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #FF6464;
     }
+
+    .swiper-pagination-fraction {
+      color: #FFE162;
+        }
 }
 
 .works-gallery{

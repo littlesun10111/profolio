@@ -2184,21 +2184,24 @@ section.section-gallery .sub-img {
   }
 }
 
-.works-slideshow {
-  position: relative;
-  margin: auto;
-  overflow: hidden;
+.works-swiper {
   width: 100%;
-  min-height: 400px;
+  position: relative;
+  overflow: hidden;
 }
 
-.works-slideshow img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
-  display: none;
+.works-swiper .swiper-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.works-swiper .swiper-button-next,
+.works-swiper .swiper-button-prev {
+  color: #FF6464;
+}
+
+.works-swiper .swiper-pagination-fraction {
+  color: #FFE162;
 }
 
 @media (min-width: 768px) {
