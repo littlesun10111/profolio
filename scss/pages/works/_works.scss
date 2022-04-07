@@ -46,6 +46,8 @@
 
         dl{
             margin-bottom: 0;
+            margin-top: 0;
+
             &+dl{
                 margin-top: 1rem;
             }
@@ -60,6 +62,8 @@
         dd{
             text-transform: capitalize;
             font-weight: 600;
+            margin: 0;
+            
             a {
               color: #2F2C2A;
               text-decoration-thickness: 2px;
