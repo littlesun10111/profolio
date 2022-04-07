@@ -326,6 +326,7 @@
 
         &>li{
             padding: 0 15px;
+            box-sizing: border-box;
 
             &+li{
                 margin-top: 20px;

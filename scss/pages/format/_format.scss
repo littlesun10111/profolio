@@ -19,7 +19,8 @@ body{
     h4,
     h5,
     h6,
-    p {
+    p,
+    blockquote {
       margin: 0;
     }
 
@@ -62,7 +63,7 @@ img{
     }
 
     &:hover{
-        transform: skewX(-8deg)translateX(5px);
+        transform: skewX(-8deg) translateX(5px);
         color: #fff;
 
         &:before{
@@ -331,7 +332,7 @@ img{
     width: fit-content;
     padding: 0.25rem 0.5rem;
     background-color: #FFE162;
-    color: inherit;
+    color: #2F2C2A;
 
     &:before{
         content: '#';
