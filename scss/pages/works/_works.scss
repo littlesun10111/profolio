@@ -103,23 +103,26 @@ section.section-gallery {
 
 }
 
-.works-swiper {
+.works-swiper,
+.multiMain-swiper,
+.multiSub-swiper {
   width: 100%;
   position: relative;
   overflow: hidden;
-  .swiper-slide {
-        width: 100%;
-        height: 100%;
-        }
 
-    .swiper-button-next,
-    .swiper-button-prev {
-      color: #FF6464;
+  .swiper-slide {
+    width: 100%;
+    height: 100%;
+}
+
+    .swiper-button-next, 
+    .swiper-button-prev{
+        color: #FF6464;
     }
 
-    .swiper-pagination-fraction {
-      color: #FFE162;
-        }
+    .swiper-pagination-fraction{
+        color: #FFE162;
+    }
 }
 
 .works-gallery{
@@ -141,22 +144,5 @@ section.section-gallery {
 }
 
 .works-swiper {
-    width: 100%;
     height: 400px;
-    position: relative;
-    overflow: hidden;
-
-    .swiper-slide{
-        width: 100%;
-        height: 100%;
-    }
-
-    .swiper-button-next, 
-    .swiper-button-prev{
-        color: #FF6464;
-    }
-
-    .swiper-pagination-fraction{
-        color: #FFE162;
-    }
 }
