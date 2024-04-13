@@ -10,6 +10,7 @@
     <link rel="icon" type="image/x-icon" href="../../assets/favicon.png" sizes="48x48">
     <link rel="stylesheet" href="../../css/all.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 </head>
 <body>
     <input type="checkbox" name="" id="menu-check">
@@ -63,16 +64,25 @@
                                     <dd>design</dd>
                                 </dl>
                             </div>
-                            <div class="works-gallery">
-                                <div class="gallery-img">
-                                    <img src="../../assets/drink-1.png" alt="">
+                            <div class="works-swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/drink-1.png" alt="泰站-形象封面">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/drink-2.jpg" alt="泰站-設計理念">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="../../assets/drink-3.png" alt="泰站-產品實拍">
+                                    </div>
+                                    
                                 </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/drink-2.jpg" alt="">
-                                </div>
-                                <div class="gallery-img">
-                                    <img src="../../assets/drink-3.png" alt="">
-                                </div>
+    
+                                <div class="swiper-pagination"></div>
+    
+                                <div class="swiper-button-next"></div>
+                                <div class="swiper-button-prev"></div>
+    
                             </div>
                         </div>
                     </div>
@@ -110,8 +120,6 @@
                                 <li><a href="https://www.linkedin.com/in/little-sun-887242208/"><i class="fa-brands fa-linkedin" target="_blank"></i>Linkedin</a></li>
                                 <li><a href="https://github.com/littlesun10111" target="_blank"><i class="fa-brands fa-github"></i>Github</a></li>
                                 <li><a href="mailto:day101010111@gmail.com" target="_blank"><i class="fa-solid fa-envelope"></i>E-mail</a></li>
-                                <li><a href="https://www.youtube.com/channel/UCWeL6PykA_gz3EmCxcEmQoQ" target="_blank"><i class="fa-brands fa-youtube"></i>Youtube</a></li>
-                                <li><a href="https://www.instagram.com/littlesun10111/"><i class="fa-brands fa-instagram" target="_blank"></i>Instagram</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -129,6 +137,7 @@
         </div>
     </a>
     <script src="../../js/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
     <script src="../../js/all.js"></script>
 </body>
 </html>

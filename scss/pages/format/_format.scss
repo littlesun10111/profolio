@@ -368,6 +368,10 @@ img{
         text-transform: uppercase;
         color: #2F2C2A;
 
+        &:hover {
+            color: #FF6464;
+        }
+
         &[aria-disabled="true"]{
             cursor: auto;
             pointer-events: none;

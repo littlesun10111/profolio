@@ -116,33 +116,14 @@ section.section-gallery {
 }
 
     .swiper-button-next, 
-    .swiper-button-prev{
+    .swiper-button-prev {
         color: #FF6464;
     }
 
-    .swiper-pagination-fraction{
+    .swiper-pagination-fraction,
+    .swiper-pagination-bullet-active {
         color: #FFE162;
     }
 }
 
-.works-gallery{
 
-    @include ipad{
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-    .gallery-img{
-        margin-bottom: 20px;
-
-        @include ipad{
-            width: 50%;
-            padding: 8px;
-            margin-bottom: 0;
-        }
-    }
-}
-
-.works-swiper {
-    height: 400px;
-}
