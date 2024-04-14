@@ -278,33 +278,20 @@
         position: relative;
         overflow: hidden;
 
-        .category-tag{
-            margin: auto;
-        }
-
         .work-txt{
-            padding-top: 30px;
+            position: relative;
+            padding-bottom: 0.875rem;
+            margin-bottom: 0.25rem;
 
             h3{
                 color: #2F2C2A;
                 font-size: 1.2rem;
                 text-transform: capitalize;
+                text-align: start;
                 font-weight: 600;
-                width: fit-content;
-                margin: 0 auto 1rem;
                 padding-bottom: 0.5rem;
-                position: relative;
-
-                &:before{
-                    content: '';
-                    width: 100%;
-                    height: 2px;
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    border-radius: 5px;
-                    background-color: #91C483;
-                }
+                padding-top: 24px;
+                transition: .3s;
 
                 @include ipad{
                     font-size: 1.4rem;
@@ -313,11 +300,23 @@
                 @include web{
                     font-size: 1.6rem;
                 }
-            }
 
-            .work-item-descr{
-                display: flex;
-                justify-content: center;
+                &+span {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    color: #2F2C2A;
+                    font-size: 0.9rem;
+                    padding-left: 2rem;
+                    display: block;
+                    width: fit-content;
+                    padding: 1px 10px;
+                    font-style: italic;
+                    opacity: 0.85;
+                    border: 1px solid #2F2C2A;
+                    border-radius: 10px;
+                    transition: .3s;
+                }
             }
 
             p{
@@ -326,24 +325,7 @@
                 letter-spacing: .1em;
                 line-height:1.4;
                 margin-bottom: 0;
-
-                &+span{
-                    color: #2F2C2A;
-                    font-size: 0.9rem;
-                    padding-left: 2rem;
-                    width: fit-content;
-                    font-style: italic;
-                    display: flex;
-                    align-items: center;
-
-                    &:before{
-                        content: '';
-                        width: 30px;
-                        height: 1px;
-                        background-color: #2F2C2A;
-                        margin-right: 1.5rem;
-                    }
-                }
+                transition: .3s;
 
                 @include ipad{
                     font-size: 1.1rem;
@@ -354,19 +336,57 @@
                 }
             }
 
+            &:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background-color: #5553;
+                left: 0;
+                bottom: 0;
+            }
+
+            @include ipad {
+                margin-bottom: 0.5rem;
+            }
+
         }
 
         &:hover{
             .work-img{
-                transform: scale(0.95);
-                transition: .2s;
+                img {
+                    transform: scale(1.03);
+                    transform-origin: center center;
+                }
+            }
+
+            h3, p{
+                color: #FF6464;
+            }
+
+            h3 + span {
+                color: #FF6464;
+                border-color: #FF6464;
             }
         }
     }
 
     .work-img{
-        margin-bottom: 20px;
-        transition: .3s;
+        margin-bottom: 12px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 56.4%;
+        position: relative;
+        overflow: hidden;
+
+        img{
+            position: absolute;
+            width: auto;
+            height: 100%;
+            top: 0;
+            left: 0;
+            transition: .3s;
+        }
     }
 
     @include ipad{

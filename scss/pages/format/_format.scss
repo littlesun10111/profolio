@@ -328,11 +328,15 @@ img{
 //section work global
 .category-tag{
     font-style: italic;
-    display: block;
+    display: inline-block;
     width: fit-content;
     padding: 0.25rem 0.5rem;
     background-color: #FFE162;
     color: #2F2C2A;
+    font-size: 0.9rem;
+    letter-spacing: 0.01em;
+    margin-right: 4px;
+    margin-bottom: 4px;
 
     &:before{
         content: '#';
