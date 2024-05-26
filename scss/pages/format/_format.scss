@@ -3,14 +3,7 @@ body{
     color: #2F2C2A;
     margin: 0;
     padding: 0;
-    font-family: Roboto,
-    Helvetica,
-    Arial,
-    Verdana,
-    "Noto Sans TC",
-    "Microsoft JhengHei",
-    微軟正黑體,
-    sans-serif;
+    font-family: "Noto Sans TC","Microsoft JhengHei",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,Verdana,"Noto Sans","Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
     }
 
     h1,
@@ -297,7 +290,7 @@ img{
     h2{
         background-color: #FFE162;
         width: fit-content;
-        padding: 4px;
+        padding: 4px 8px;
         font-size: 1.8rem;
         text-transform: uppercase;
         font-weight: 600;
