@@ -88,6 +88,14 @@
 //section-biography
 .bio-content{
 
+    div:nth-child(2){
+        .bio-img{
+            @include ipad{
+                float: right;
+            }
+        }
+    }
+
     .bio-img{
         padding: 0 20px;
         margin-bottom: 20px;
@@ -110,12 +118,12 @@
             margin-bottom: 1.2rem;
 
             @include ipad{
-                font-size: 1.2rem;
+                font-size: 1.125rem;
                 line-height: 1.4;
             }
 
             @include web{
-                font-size: 1.4rem;
+                font-size: 1.375rem;
                 line-height: 1.8;
             }
         }
@@ -153,46 +161,99 @@
 }
 
 //experience section
+.exper-txt {
+    @include ipad {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.container-avatar {
+    .avatar-group {
+        width: 100%;
+
+    }
+
+    @include ipad {
+        width: calc(40% - 30px);
+    }
+
+    ul{
+        padding: 0;
+        margin: 0;
+    }
+
+    li{
+        list-style: none;
+    }
+
+    .sprite {
+        width: 100%;
+        aspect-ratio: 33/26;
+        background-image: url(../../../assets/sprite-01.png);
+        background-repeat: no-repeat;
+        background-size: auto 100%;
+        animation: sprite 0.8s steps(4) infinite normal forwards;
+        &:nth-child(3){
+            aspect-ratio: 15/13;
+            background-image: url(../../../assets/sprite-03.png);
+            animation-timing-function: steps(5);
+        }
+        &:nth-child(4){
+            aspect-ratio: 350/262;
+            background-image: url(../../../assets/sprite-02.png);
+        }
+        &:nth-child(5){
+            aspect-ratio: 340/260;
+            background-image: url(../../../assets/sprite-04.png);
+            animation-timing-function: steps(5);
+        }
+    }
+}
+
+@keyframes sprite {
+    0%{
+        background-position-x: 0;
+    }
+    100%{
+        background-position-x: 100%;
+    }
+}
 
 .timeline-content{
-    display: flex;
     position: relative;
     width: 100%;
 
+    @include ipad {
+        width: 60%;
+    }
+
     .container-info{
         width: 100%;
-
-        .timeline-section{
-            padding-left: 20px;
-            margin-bottom: 24px;
-
-            @include ipad{
-                &:nth-child(even){
-                    .timeline-box{
-                        margin-left: auto;
-                    }
-                }
-
-                &:nth-child(odd){
-                    .timeline-arrow{
-                        left: initial;
-                        right: -15px;
-                        transform: rotate(180deg);
-                    }
-                }
+        padding-top: 1rem;
+        
+        >ul {
+            margin: 0;
+            padding: 0;
+            li{
+                list-style: none;
             }
         }
 
+        .timeline-section{
+            margin-bottom: 24px;
+        }
+
         .timeline-box{
-            padding: 12px;
+            padding: 1.5rem 1.225rem;
             background-color: #eee;
             box-sizing: border-box;
             border-radius: 20px;
             position: relative;
 
             h3{
-                margin-bottom: 12px;
-                font-size: 1.2rem;
+                font-size: 1.375rem;
+                margin-bottom: 0.5rem;
                 font-weight: 800;
                 &+p{
                     color: #666;
@@ -202,8 +263,14 @@
                         padding-left: 8px;
                         font-style: italic;
                         font-size: 0.9rem;
+                        font-weight: 500;
+                        color: #58784f;
                     }
                 }
+                @include ipad {
+                    font-size: 1.5rem;
+                }
+
             }
 
             ul{
@@ -224,97 +291,103 @@
 
             .timeline-arrow{
                 position: absolute;
-                top: 50px;
-                left: -14px;
+                top: -14px;
+                left: 50%;
+                transform: translateX(-50%);
                 width: 0;
                 height: 0;
                 border-style: solid;
-                border-width: 15px 15px 15px 0;
-                border-color: transparent #eee transparent transparent;
+                border-width: 0 15px 15px 15px ;
+                border-color: transparent transparent #eee transparent ;
             }
 
             @include ipad{
-                width: 46%;
-                padding: 16px;
+                width: 80%;
+                margin: 0 auto;
             }
 
             @include web{
-                padding: 20px;
+                // padding: 20px;
             }
         }
 
     }
 
     .container-time-line{
-        order: -1;
-        padding: 0 5px;
+        padding: 1rem 0;
+        position: relative;
 
         .time-line-bar{
-            width: 10px;
-            height: 100%;
+            width: 100%;
+            height: 10px;
             border-radius: 15px;
             background-color: #aaa;
+
+            @include ipad {
+                width: 80%;
+                margin: 0 auto;
+            }
         }
 
-        @include ipad{
+        .time-bullet{
             position: absolute;
+            top: 50%;
             left: 50%;
-            top: 0;
-            height: 100%;
+            transform: translate(-50%,-50%);
+            width: 20px;
+            height: 20px;
+            aspect-ratio: 1/1;
+            background-color: #666;
+            border-radius: 50%;
+            box-shadow:
+                0px 0px 10px rgba(0, 0, 0, 0.04),
+                0px 0px 80px rgba(0, 0, 0, 0.08)
+                ;
+        }
+
+    }
+
+    .container-year {
+        padding: 0.5rem 0;
+
+        [class^="swiper-button"]::after{
+            font-family:'Material Icons';
+            color: #58784f;
+        }
+
+        .swiper-button-prev::after {
+            content:'\eac3';
+        }
+
+        .swiper-button-next::after {
+            content:'\eac9';
+        }
+
+        @include ipad {
+            width: 80%;
+            margin: 0 auto;
         }
     }
 
-    .container-bullet{
-        order: -1;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 1;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
+    .year-group{
+        margin: 0;
+        padding: 0;
 
-        .timeline-section{
-            width: 20px;
-            flex: 1;
-
-            .time-bullet{
-                width: 100%;
-                height: 20px;
-                background-color: #666;
-                border-radius: 50%;
-                margin-top: 55px;
-                box-shadow:
-                    0px 0px 10px rgba(0, 0, 0, 0.04),
-                    0px 0px 80px rgba(0, 0, 0, 0.08)
-                    ;
-            }
-
-            &:nth-child(2){
-                .time-bullet{
-                    margin-top: 60px;
-                }
-            }
-
-            &:nth-child(3){
-                .time-bullet{
-                    margin-top: 20px;
-                }
-            }
-
-            &:last-child{
-                .time-bullet{
-                    margin-top: 50px;
-
-                    @include ipad{
-                        margin-top: 25px;
-                    }
-                }
-            }
+        li {
+            list-style: none;
         }
 
-        @include ipad{
-            left: 50%;
+        .year-tags {
+            display: block;
+            padding: 4px 1rem;
+            font-size: 1.875rem;
+            background-color: #FFE162;
+            color: #2F2C2A;
+            letter-spacing: 0.01em;
+            border-radius: 87px;
+            width: fit-content;
+            margin: 0 auto;
+            text-transform: uppercase;
         }
     }
 
@@ -375,33 +448,25 @@
         span{
             font-size: 4rem;
             display: block;
-            width: fit-content;
-            padding: 20px 24px;
+            aspect-ratio: 1/1;
+            width: 100%;
+            max-width: 150px;
+            padding: 20px;
             border-radius: 50%;
             background-color: #eee;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             margin: 0 auto 1rem;
 
             .fa-solid{
-                aspect-ratio: 1/1;
-                width: 80px;
                 text-align: center;
                 color: #ccc;
-
-                @include ipad{
-                    width: 60px;
-                }
-
-                @include web{
-                    width: 44px;
-                }
+                font-size: inherit;
             }
 
             @include ipad{
-                font-size: 3rem;
-            }
-
-            @include web{
-                font-size: 2.2rem;
+                font-size: 5rem;
             }
         }
 

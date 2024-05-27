@@ -64,9 +64,8 @@ $(document).ready(function () {
   btn_top();
   filterInit();
   filterTags();
-  slidershow();
 
-  const bannerSwiper = new Swiper(".works-swiper", {
+  const swiperBannerParams = {
     spaceBetween: 30,
     loop: false,
     grabCursor: true,
@@ -77,7 +76,8 @@ $(document).ready(function () {
 
     pagination: {
       el: ".swiper-pagination",
-      type: "fraction",
+      type: "bullets",
+      dynamicBullets: true,
       clickable: true,
     },
 
@@ -85,9 +85,9 @@ $(document).ready(function () {
       nextEl: ".swiper-button-next",
       prevEl: ".swiper-button-prev",
     },
-  });
+  };
 
-  const mainDetailSwiper = new Swiper(".multiMain-swiper", {
+  const swiperMainParams = {
     loop: false,
     grabCursor: true,
     autoHeight: true,
@@ -102,9 +102,9 @@ $(document).ready(function () {
       type: "progressbar",
       clickable: true,
     },
-  });
+  };
 
-  const subDetailSwiper = new Swiper(".multiSub-swiper", {
+  const swiperSubParams = {
     loop: false,
     grabCursor: true,
     autoHeight: true,
@@ -120,5 +120,48 @@ $(document).ready(function () {
       dynamicBullets: true,
       clickable: true,
     },
-  });
+  };
+
+  const experienceParams = {
+    loop: false,
+    autoHeight: true,
+    spaceBetween: 10,
+    controller: {
+      by: "container",
+    },
+  };
+
+  const avatarParams = {
+    loop: false,
+    spaceBetween: 10,
+    noSwiping: true,
+    controller: {
+      by: "container",
+    },
+  };
+
+  const yearParams = {
+    loop: false,
+    autoHeight: true,
+    grabCursor: true,
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    controller: {
+      by: "container",
+    },
+  };
+
+  var bannerSwiper = new Swiper(".works-swiper", swiperBannerParams);
+  var mainDetailSwiper = new Swiper(".multiMain-swiper", swiperMainParams);
+  var subDetailSwiper = new Swiper(".multiSub-swiper", swiperSubParams);
+  var experienceSwiper = new Swiper(".container-info", experienceParams);
+  var yearSwiper = new Swiper(".container-year", yearParams);
+  var avatarSwiper = new Swiper(".avatar-group", avatarParams);
+
+  yearSwiper.controller.control = [experienceSwiper, avatarSwiper];
+  experienceSwiper.controller.control = [yearSwiper, avatarSwiper];
+
 });
